@@ -2,15 +2,15 @@
    DESIGN SYSTEM
    ============================================================ */
 :root {
-  --bg:        #FAFAFA;
-  --bg-alt:    #F3F4F6;
-  --surface:   #FFFFFF;
-  --text:      #111827;
-  --text-2:    #4B5563;
-  --text-3:    #9CA3AF;
-  --accent:    #111827;
-  --border:    #E5E7EB;
-  --border-2:  #D1D5DB;
+  --bg:        #121212;
+  --bg-alt:    #1A1A1A;
+  --surface:   #1E1E1E;
+  --text:      #E8E8E8;
+  --text-2:    #A0A0A0;
+  --text-3:    #666666;
+  --accent:    #E8E8E8;
+  --border:    #2A2A2A;
+  --border-2:  #383838;
   --font:      'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --ease:      200ms ease;
   --max-w:     720px;
@@ -51,7 +51,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 250, 250, 0.92);
+  background: rgba(18, 18, 18, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -94,7 +94,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   border-radius: 6px;
   transition: background var(--ease), border-color var(--ease);
 }
-.nav-cta:hover { background: var(--text); color: #fff; border-color: var(--text); }
+.nav-cta:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -157,7 +157,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   align-items: center;
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: var(--bg);
   background: var(--text);
   padding: 10px 24px;
   border-radius: 6px;
@@ -175,7 +175,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   border-radius: 6px;
   transition: background var(--ease), color var(--ease);
 }
-.btn-secondary:hover { background: var(--text); color: #fff; border-color: var(--text); }
+.btn-secondary:hover { background: rgba(232,232,232,0.1); color: var(--text); border-color: var(--border-2); }
 
 /* Metrics */
 .hero-metrics {
@@ -367,9 +367,10 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0;
+  padding: 20px 0;
   cursor: pointer;
   user-select: none;
+  gap: 16px;
 }
 .principle-head h3 {
   font-size: 15px;
@@ -377,37 +378,14 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   color: var(--text);
   letter-spacing: -0.01em;
 }
-.principle-toggle {
-  width: 24px;
-  height: 24px;
+.principle-arrow {
   flex-shrink: 0;
-  position: relative;
+  color: var(--text-3);
+  transition: transform var(--ease), color var(--ease);
 }
-.principle-toggle::before,
-.principle-toggle::after {
-  content: '';
-  position: absolute;
-  background: var(--text-3);
-  border-radius: 1px;
-  transition: transform var(--ease), opacity var(--ease);
-}
-.principle-toggle::before {
-  width: 12px;
-  height: 1.5px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.principle-toggle::after {
-  width: 1.5px;
-  height: 12px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.principle.open .principle-toggle::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-  opacity: 0;
+.principle.open .principle-arrow {
+  transform: rotate(180deg);
+  color: var(--text-2);
 }
 .principle-body {
   max-height: 0;
@@ -514,7 +492,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
     top: 56px;
     left: 0;
     right: 0;
-    background: rgba(250, 250, 250, 0.97);
+    background: rgba(18, 18, 18, 0.97);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     flex-direction: column;

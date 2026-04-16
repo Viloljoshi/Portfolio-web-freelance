@@ -14,25 +14,31 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-/* PRINCIPLES — accordion */
-document.querySelectorAll('.principle').forEach(card => {
-  const head = card.querySelector('.principle-head');
+/* PRINCIPLES — accordion, first open by default */
+const principles = document.querySelectorAll('.principle');
+
+function openPrinciple(card) {
   const body = card.querySelector('.principle-body');
+  card.classList.add('open');
+  body.style.maxHeight = body.scrollHeight + 'px';
+}
 
-  head.addEventListener('click', () => {
+function closePrinciple(card) {
+  card.classList.remove('open');
+  card.querySelector('.principle-body').style.maxHeight = '0';
+}
+
+principles.forEach(card => {
+  card.querySelector('.principle-head').addEventListener('click', () => {
     const isOpen = card.classList.contains('open');
-
-    document.querySelectorAll('.principle').forEach(c => {
-      c.classList.remove('open');
-      c.querySelector('.principle-body').style.maxHeight = '0';
-    });
-
-    if (!isOpen) {
-      card.classList.add('open');
-      body.style.maxHeight = body.scrollHeight + 'px';
-    }
+    principles.forEach(c => closePrinciple(c));
+    if (!isOpen) openPrinciple(card);
   });
 });
+
+// Open first one on load
+const firstOpen = document.querySelector('.principle.open');
+if (firstOpen) openPrinciple(firstOpen);
 
 /* ACTIVE NAV — intersection observer */
 const sections = document.querySelectorAll('section[id]');

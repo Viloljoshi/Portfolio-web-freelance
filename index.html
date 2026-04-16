@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vilol Joshi · Technical AI Product Manager</title>
+  <title>Vilol Joshi — Technical AI Product Manager</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,483 +14,244 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Vilol Joshi</a>
+      <a href="#" class="nav-logo">VJ</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#timeline" class="nav-link">Experience</a></li>
-        <li><a href="#principles" class="nav-link">How I Think</a></li>
-        <li><a href="#dilemmas" class="nav-link">What I Prioritize</a></li>
-        <li><a href="#projects" class="nav-link">Weekend Builds</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#thinking" class="nav-link">Thinking</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
       </ul>
       <div class="nav-right">
         <a href="https://calendly.com/joshivilol1011/exploring-opportunities" target="_blank" class="nav-cta">Get in touch</a>
         <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
+          <span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section id="hero" class="section hero-section">
-    <div class="container container-narrow">
-      <div class="avatar" id="avatarEl" title="Click to upload photo">VJ<span class="avatar-edit-hint">EDIT</span></div>
-      <input type="file" id="avatarUpload" accept="image/*" style="display:none">
-      <h1 class="hero-name">Vilol Joshi</h1>
-      <div class="hero-role">Technical AI Product Manager</div>
-      <p class="hero-tagline">Production AI for regulated environments. Five years of getting it past compliance review.</p>
-      <p class="hero-bio">Agentic systems for banks, insurers, and compliance-heavy environments where silent failures are regulatory events, not product bugs. Governance built in from day one. Not because it's required. Because it's what makes the system trustworthy enough to actually ship.</p>
+  <section class="hero">
+    <div class="container">
+      <p class="hero-label">Technical AI Product Manager</p>
+      <h1 class="hero-title">I build the AI systems<br>that actually ship.</h1>
+      <p class="hero-sub">Agentic pipelines, compliance automation, LLM evaluation. I architect, I build, and I get it past the CISO, the CRO, and the compliance team — in the same sprint.</p>
       <div class="hero-actions">
-        <a href="https://www.notion.so/21453237098280fdbd6cddf1848c6c35?v=21453237098281468391000cf1b9581b" target="_blank" class="btn btn-primary">View AI Portfolio →</a>
-        <a href="https://calendly.com/joshivilol1011/exploring-opportunities" target="_blank" class="btn btn-outline">Get in touch</a>
+        <a href="https://www.notion.so/21453237098280fdbd6cddf1848c6c35?v=21453237098281468391000cf1b9581b" target="_blank" class="btn-primary">View portfolio</a>
+        <a href="https://calendly.com/joshivilol1011/exploring-opportunities" target="_blank" class="btn-secondary">Book a call</a>
       </div>
-
-      <!-- Stats row -->
-      <div class="stats-row">
-        <div class="stat-card">
-          <span class="stat-num">45%</span>
-          <span class="stat-label">Compliance ops reduction</span>
-          <span class="stat-context">Solytics Partners</span>
+      <div class="hero-metrics">
+        <div class="metric">
+          <span class="metric-value">45%</span>
+          <span class="metric-label">Compliance ops reduction</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-num">70%</span>
-          <span class="stat-label">Less manual processing</span>
-          <span class="stat-context">50K+ KYC/AML docs/month</span>
+        <div class="metric">
+          <span class="metric-value">70%</span>
+          <span class="metric-label">Less manual processing</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-num">54M+</span>
-          <span class="stat-label">Users reached via AI</span>
-          <span class="stat-context">Milka global campaign, Ogilvy</span>
+        <div class="metric">
+          <span class="metric-value">54M+</span>
+          <span class="metric-label">Users reached via AI</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-num">$15M</span>
-          <span class="stat-label">Enterprise pipeline</span>
-          <span class="stat-context">Via AI architecture demos</span>
-        </div>
-      </div>
-
-      <!-- Companies -->
-      <div class="companies-row">
-        <span class="companies-label">Worked with</span>
-        <div class="companies-list">
-          <span>Solytics Partners</span>
-          <span>Schbang</span>
-          <span>Ogilvy</span>
-          <span>SEB Global Services</span>
+        <div class="metric">
+          <span class="metric-value">$15M</span>
+          <span class="metric-label">Enterprise pipeline</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS / WHAT I CAN DO -->
-  <section id="skills" class="section skills-section">
+  <!-- WHAT I BUILD -->
+  <section id="work" class="section">
     <div class="container">
-      <div class="section-head centered">
-        <h2 class="section-title">What I Can Build For You</h2>
-        <p class="section-sub">Not a list of buzzwords. Here's what each capability actually delivers.</p>
+      <div class="section-header">
+        <h2>What I build</h2>
       </div>
-
-      <div class="cap-grid">
-        <div class="cap-card featured">
-          <div class="cap-num">01</div>
-          <h3 class="cap-title">Agentic AI systems that run in production</h3>
-          <p class="cap-desc">LLM orchestration, multi-agent pipelines, tool-calling systems, and HITL validation layers designed for regulated environments. Not a demo. A system that passes enterprise security review and compliance sign-off.</p>
-          <div class="cap-tags"><span>Agentic Workflows</span><span>Multi-Agent Orchestration</span><span>HITL Architecture</span><span>AI Guardrails</span><span>LLMOps</span></div>
-        </div>
-
-        <div class="cap-card">
-          <div class="cap-num">02</div>
-          <h3 class="cap-title">Document-heavy compliance ops, automated</h3>
-          <p class="cap-desc">KYC, AML, credit reports, mortgage underwriting. OCR + LLM hybrid pipelines with field-level confidence scoring and exception routing so humans only see what actually needs them.</p>
-          <div class="cap-tags"><span>OCR + LLM</span><span>Confidence Scoring</span><span>KYC/AML</span><span>Exception Routing</span></div>
-        </div>
-
-        <div class="cap-card">
-          <div class="cap-num">03</div>
-          <h3 class="cap-title">LLM evaluation: before your users find the bugs</h3>
-          <p class="cap-desc">Golden dataset evaluation, hallucination detection, regression testing, model drift monitoring. A framework that tells you when the model is failing before production does.</p>
-          <div class="cap-tags"><span>Golden Dataset</span><span>LLM-as-Judge</span><span>Hallucination Detection</span><span>Model Monitoring</span></div>
-        </div>
-
-        <div class="cap-card">
-          <div class="cap-num">04</div>
-          <h3 class="cap-title">Legacy fintech modernized with AI</h3>
-          <p class="cap-desc">Replace static rule-based compliance modules with LLM-powered capabilities (fine-tuning, RAG pipelines, API integrations), without breaking what enterprise risk teams already approved.</p>
-          <div class="cap-tags"><span>Platform Modernization</span><span>Model Fine-Tuning</span><span>RAG Pipelines</span><span>API Integration</span></div>
-        </div>
-
-        <div class="cap-card">
-          <div class="cap-num">05</div>
-          <h3 class="cap-title">AI investments that get stakeholder sign-off</h3>
-          <p class="cap-desc">AI architecture presented to bank CISOs, CROs, and CTOs who had already formed strong views. Technical decisions translated into business outcomes enterprise stakeholders approve and sign off on.</p>
-          <div class="cap-tags"><span>Enterprise Roadmaps</span><span>Stakeholder Management</span><span>AI Strategy</span><span>Sales Support</span></div>
-        </div>
-
-        <div class="cap-card">
-          <div class="cap-num">06</div>
-          <h3 class="cap-title">AI products users forget are AI</h3>
-          <p class="cap-desc">B2C AI from discovery to delivery: RAG-backed features, conversational agents, explainable outputs. The "AI-powered" label is a liability if the experience underneath it doesn't work.</p>
-          <div class="cap-tags"><span>Conversational AI</span><span>RAG + Citations</span><span>User Research</span><span>Explainability</span></div>
-        </div>
-      </div>
-
-      <!-- Industry use cases -->
-      <div class="industries-section">
-        <div class="industries-section-title">Where these systems apply</div>
-        <div class="industries-grid">
-          <div class="industry-card">
-            <div class="ind-label">Manufacturing &amp; Ops</div>
-            <ul class="ind-list">
-              <li>Quality inspection reports automated via vision + LLM pipelines</li>
-              <li>Supplier compliance docs: multi-format extraction with exception routing</li>
-              <li>Maintenance logs triaged and summarized from unstructured data</li>
-              <li>ISO/AS9100 audit trail generation from production records</li>
-            </ul>
-          </div>
-          <div class="industry-card">
-            <div class="ind-label">Insurance</div>
-            <ul class="ind-list">
-              <li>Claims intake: OCR + LLM extraction from multi-document bundles</li>
-              <li>Underwriting support: structured risk summaries from submissions</li>
-              <li>Policy review agents with citation-grounded answers for customers</li>
-              <li>Renewal flow automation with confidence-scored exception routing</li>
-            </ul>
-          </div>
-          <div class="industry-card">
-            <div class="ind-label">Healthcare &amp; Life Sciences</div>
-            <ul class="ind-list">
-              <li>Prior authorization: document classification + routing to reviewers</li>
-              <li>Clinical documentation: structured extraction from physician notes</li>
-              <li>Regulatory submission prep with multi-source aggregation + audit trail</li>
-              <li>Patient-facing agents with RAG-backed answers and source citations</li>
-            </ul>
-          </div>
-          <div class="industry-card">
-            <div class="ind-label">Legal &amp; Compliance</div>
-            <ul class="ind-list">
-              <li>Contract review: clause extraction, anomaly flagging vs. templates</li>
-              <li>Regulatory change monitoring with auto-summarization + impact routing</li>
-              <li>Due diligence automation: multi-document synthesis with traceability</li>
-              <li>Litigation prep: structured fact extraction from large document sets</li>
-            </ul>
+      <div class="capabilities">
+        <div class="cap-item">
+          <span class="cap-num">01</span>
+          <div>
+            <h3>Agentic AI for regulated environments</h3>
+            <p>LLM orchestration, multi-agent pipelines, HITL validation. Systems that pass enterprise security review and compliance sign-off.</p>
           </div>
         </div>
-      </div>
-
-      <!-- Why hire me -->
-      <div class="why-section">
-        <h3 class="why-title">Why Companies Work With Me</h3>
-        <div class="why-grid">
-          <div class="why-card">
-            <p>AI shipped in banking, insurance, and compliance. Environments where a silent error at scale is a regulatory event, not a product bug. That distinction shapes every architecture decision.</p>
-          </div>
-          <div class="why-card">
-            <p>Governance built in from day one. Not as a compliance checkbox. As the thing that makes the system trustworthy enough for enterprise sign-off. The audit trail isn't plumbing. It's the product.</p>
-          </div>
-          <div class="why-card">
-            <p>Architecture conversations with engineers and risk conversations with CISOs, the same week, sometimes the same day. $15M in enterprise sales pipeline supported by AI solution demos. The technical and organizational decisions are rarely the same. Both get navigated.</p>
-          </div>
-          <div class="why-card">
-            <p>No optimization for the cleanest demo. Optimization for what ships. A phased 80% solution running in production beats an undeployed 100% every time. The 80% versions are the ones that ran.</p>
+        <div class="cap-item">
+          <span class="cap-num">02</span>
+          <div>
+            <h3>Compliance document automation</h3>
+            <p>KYC, AML, credit reports. OCR + LLM hybrid pipelines with confidence scoring so humans only see what actually needs them.</p>
           </div>
         </div>
-      </div>
-
-      <!-- Tech stack -->
-      <div class="stack-section">
-        <h3 class="stack-title">Full Technical Stack</h3>
-        <div class="stack-groups">
-          <div class="sg"><span class="sg-label">Gen-AI &amp; Agentic Systems</span><div class="chips"><span>LLM Application Design</span><span>Agentic Workflows</span><span>Multi-Agent Orchestration</span><span>Toolchain / Function Calling</span><span>Context Engineering</span><span>RAG Pipelines</span><span>Memory &amp; Session Management</span><span>Prompt Engineering</span><span>Prompt Versioning</span><span>Model Fine-Tuning</span><span>AI Guardrails &amp; Safety Layers</span><span>LLMOps</span><span>Model Versioning</span><span>AI Governance</span></div></div>
-          <div class="sg"><span class="sg-label">AI Evaluation &amp; Reliability</span><div class="chips"><span>Golden Dataset Evaluation</span><span>LLM Regression Testing</span><span>Hallucination Detection</span><span>Confidence Scoring</span><span>Model Monitoring</span><span>AI Observability</span><span>Human-in-the-Loop Validation</span><span>Evaluation Framework Design</span><span>AI Telemetry</span><span>Trace-based Observability</span></div></div>
-          <div class="sg"><span class="sg-label">Data, Platforms &amp; Integrations</span><div class="chips"><span>Python</span><span>SQL</span><span>ETL/ELT Pipelines</span><span>OCR + LLM Document Intelligence</span><span>Structured Data Extraction</span><span>REST APIs</span><span>Webhooks</span><span>Event-Driven Architectures</span><span>Ontologies</span><span>Knowledge Graph-Ready Data Models</span><span>n8n Automation</span><span>Camunda BPMN</span></div></div>
-          <div class="sg"><span class="sg-label">Cloud &amp; Infrastructure</span><div class="chips"><span>AWS (EC2, S3)</span><span>Azure</span><span>GCP</span><span>CI/CD Pipelines</span><span>Environment &amp; Release Management</span><span>Production Deployment for AI Systems</span></div></div>
-          <div class="sg"><span class="sg-label">Product, Analytics &amp; Experimentation</span><div class="chips"><span>AI Platform Strategy</span><span>Platform Modernization</span><span>Enterprise Product Roadmaps</span><span>Technical Product Ownership</span><span>Agile/Scrum</span><span>A/B Testing</span><span>Experimentation Frameworks</span><span>Product Metrics</span><span>Power BI</span><span>Looker</span><span>Google Analytics</span><span>Figma</span><span>Framer</span><span>Miro</span><span>Jira</span><span>Confluence</span><span>Notion</span><span>Cursor</span><span>Claude Code</span></div></div>
-          <div class="sg"><span class="sg-label">Domain, Research &amp; Tools</span><div class="chips"><span>KYC &amp; AML Workflows</span><span>GRC</span><span>US Mortgage &amp; Credit Systems</span><span>Financial Operations Automation</span><span>Compliance-Aware AI</span><span>Model Risk Management</span><span>User Interviews</span><span>Product Discovery</span><span>Stakeholder Management</span><span>Customer Journey Mapping</span><span>Requirements Engineering</span></div></div>
+        <div class="cap-item">
+          <span class="cap-num">03</span>
+          <div>
+            <h3>LLM evaluation frameworks</h3>
+            <p>Golden dataset evaluation, hallucination detection, regression testing. Know when your model is failing before production does.</p>
+          </div>
         </div>
-      </div>
-
-      <!-- Certifications -->
-      <div class="certs-section">
-        <h3 class="stack-title">Certifications</h3>
-        <div class="chips chips-certs">
-          <span>Certified Scrum Product Owner (CSPO)</span>
-          <span>Certified Business Process Analyst (CIBM, BPMN)</span>
-          <span>Google Project Management</span>
-          <span>Google Data Analytics</span>
-          <span>LangChain for LLM Applications</span>
-          <span>Vector Databases &amp; RAG Pipelines – LangChain</span>
-          <span>Prompt Engineering for LLMs</span>
-          <span>Microsoft Responsible AI (Foundations)</span>
-          <span>MLOps Fundamentals – DeepLearning.AI</span>
-          <span>AWS Cloud Practitioner (Foundational)</span>
-          <span>Product Management – Coursera</span>
-          <span>Process Engineering &amp; Analytics</span>
+        <div class="cap-item">
+          <span class="cap-num">04</span>
+          <div>
+            <h3>Legacy fintech modernization</h3>
+            <p>Replace static rule-based compliance modules with LLM-powered capabilities without breaking what risk teams already approved.</p>
+          </div>
+        </div>
+        <div class="cap-item">
+          <span class="cap-num">05</span>
+          <div>
+            <h3>AI strategy for enterprise stakeholders</h3>
+            <p>Technical decisions translated into business outcomes that CISOs, CROs, and CTOs approve and sign off on.</p>
+          </div>
+        </div>
+        <div class="cap-item">
+          <span class="cap-num">06</span>
+          <div>
+            <h3>AI products users forget are AI</h3>
+            <p>RAG-backed features, conversational agents, explainable outputs. The experience works. The label doesn't matter.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CAREER TIMELINE -->
-  <section id="timeline" class="section timeline-section">
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
     <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">Career</h2>
-        <p class="section-sub">Every role added a specific capability. Here's what each one built.</p>
+      <div class="section-header">
+        <h2>Experience</h2>
       </div>
-
       <div class="timeline">
 
-        <div class="tl-item">
-          <div class="tl-left">
-            <div class="tl-dot active"></div>
-            <div class="tl-line"></div>
+        <div class="tl-entry">
+          <div class="tl-meta">
+            <span class="tl-date">2024 — Present</span>
+            <span class="tl-badge">Current</span>
           </div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <div>
-                <span class="tl-dates">Mar 2024 – Present</span>
-                <span class="tl-pill current">Current</span>
-              </div>
-              <span class="tl-loc">Berlin &amp; Mumbai</span>
+          <div class="tl-content">
+            <h3>Solytics Partners <span class="tl-role">Technical AI PM</span></h3>
+            <p>Replacing static rule-based compliance modules with LLM-powered agentic systems for enterprise banks. Built strict phase orchestration (Pre-LLM Guardrails, LLM, Post-LLM, Tool, HITL, Verification) that made the system trustworthy enough for enterprise sign-off.</p>
+            <div class="tl-highlights">
+              <span>45% compliance review reduction</span>
+              <span>$15M pipeline supported</span>
+              <span>65% agent adoption increase</span>
             </div>
-            <h3 class="tl-company">Solytics Partners</h3>
-            <div class="tl-role">Technical AI PM · Nimbus Platform Modernization</div>
-            <p class="tl-summary">Replacing static rule-based compliance modules with LLM-powered agentic systems for enterprise banks. The hard part isn't building the AI. It's building it in a way that risk and compliance teams can sign off.</p>
-            <div class="tl-stats">
-              <div class="tl-stat"><strong>45%</strong><span>reduction in compliance review effort</span></div>
-              <div class="tl-stat"><strong>65%</strong><span>increase in UDF agent adoption</span></div>
-              <div class="tl-stat"><strong>$15M</strong><span>enterprise pipeline supported</span></div>
-            </div>
-            <ul class="tl-bullets">
-              <li>Built agentic orchestration with strict phase model: Pre-LLM Guardrails → LLM → Post-LLM Guardrails → Tool → HITL → Verification</li>
-              <li>Fine-tuned models for KYC, credit reports, regulatory filings, reducing false positives in compliance flags</li>
-              <li>Introduced OCR + LLM hybrid pipeline for large-volume document review, enabling faster enterprise onboarding</li>
-              <li>Led solution architecture demos with bank CISOs, CROs, CTOs, directly supporting $15M enterprise sales pipeline</li>
-              <li>Standardized third-party AML/KYC API integrations, reducing integration turnaround by 25%</li>
-            </ul>
           </div>
         </div>
 
-        <div class="tl-item">
-          <div class="tl-left">
-            <div class="tl-dot"></div>
-            <div class="tl-line"></div>
+        <div class="tl-entry">
+          <div class="tl-meta">
+            <span class="tl-date">2023 — 2024</span>
           </div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <div><span class="tl-dates">Aug 2023 – Mar 2024</span></div>
-              <span class="tl-loc">Mumbai</span>
+          <div class="tl-content">
+            <h3>Ogilvy <span class="tl-role">AI Product Manager</span></h3>
+            <p>Led "Sing it with Milka" — an AI-native campaign generating 54M+ unique outputs and driving 9% global revenue uplift. Proved generative AI at scale moves real revenue, not just engagement metrics.</p>
+            <div class="tl-highlights">
+              <span>54M+ AI generations</span>
+              <span>9% revenue uplift</span>
+              <span>35% less manual reporting</span>
             </div>
-            <h3 class="tl-company">Ogilvy</h3>
-            <div class="tl-role">AI Product Manager</div>
-            <p class="tl-summary">Led an AI-native campaign that proved generative AI at scale can move real revenue, not just engagement metrics.</p>
-            <div class="tl-stats">
-              <div class="tl-stat"><strong>54M+</strong><span>unique AI music generations</span></div>
-              <div class="tl-stat"><strong>9%</strong><span>global revenue uplift</span></div>
-              <div class="tl-stat"><strong>35%</strong><span>less manual reporting</span></div>
-            </div>
-            <ul class="tl-bullets">
-              <li>"Sing it with Milka": AI-native campaign generating 54M+ unique outputs, driving 9% global revenue uplift for Milka brand</li>
-              <li>Authored user stories, acceptance criteria, and product documentation across global product releases</li>
-              <li>Reduced manual reporting effort by 35% through automation and structured data workflows</li>
-            </ul>
           </div>
         </div>
 
-        <div class="tl-item">
-          <div class="tl-left">
-            <div class="tl-dot"></div>
-            <div class="tl-line"></div>
+        <div class="tl-entry">
+          <div class="tl-meta">
+            <span class="tl-date">2022 — 2024</span>
           </div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <div><span class="tl-dates">Oct 2022 – Aug 2024</span></div>
-              <span class="tl-loc">Mumbai</span>
+          <div class="tl-content">
+            <h3>Schbang <span class="tl-role">Technical PM</span></h3>
+            <p>First production AI for BFSI clients. Built OCR + LLM hybrid pipelines for 50K+ KYC/AML documents monthly. Applied AI personalization to digital banking journeys serving 5M+ users.</p>
+            <div class="tl-highlights">
+              <span>70% manual doc ops reduction</span>
+              <span>+18% conversion uplift</span>
+              <span>34% faster time-to-market</span>
             </div>
-            <h3 class="tl-company">Schbang</h3>
-            <div class="tl-role">Technical Product Manager</div>
-            <p class="tl-summary">First production AI for BFSI clients. Fast lesson: pure OCR fails on unstructured content, pure LLM hallucinates on structured tables. Hybrid pipelines with confidence scoring are the only reliable answer at volume.</p>
-            <div class="tl-stats">
-              <div class="tl-stat"><strong>70%</strong><span>reduction in manual document ops</span></div>
-              <div class="tl-stat"><strong>+18%</strong><span>conversion uplift via AI personalization</span></div>
-              <div class="tl-stat"><strong>34%</strong><span>faster time-to-market (5M+ users)</span></div>
-            </div>
-            <ul class="tl-bullets">
-              <li>Rebuilt AI document workflows handling 50K+ KYC/AML documents monthly: OCR + LLM + confidence scoring + exception routing</li>
-              <li>BPMN-aligned orchestration via n8n + Azure OCR + LLM; structured prompt pipelines eliminated hallucinations in production</li>
-              <li>Applied AI personalization to digital banking journeys: +18% conversion uplift, 12% churn reduction</li>
-              <li>Shifted digital banking apps (5M+ users) from slow-release cycles to weekly deployments, delivering 34% faster time-to-market</li>
-            </ul>
           </div>
         </div>
 
-        <div class="tl-item last">
-          <div class="tl-left">
-            <div class="tl-dot"></div>
+        <div class="tl-entry">
+          <div class="tl-meta">
+            <span class="tl-date">2019 — 2021</span>
           </div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <div><span class="tl-dates">Jun 2019 – Oct 2021</span></div>
-              <span class="tl-loc">Riga</span>
-            </div>
-            <h3 class="tl-company">SEB Global Services</h3>
-            <div class="tl-role">Derivative Operations Specialist</div>
-            <p class="tl-summary">Compliance-heavy financial operations from the inside. The manual processes that the last 5 years have been spent automating. Knowing what operations look like before AI is what governance actually means.</p>
-            <div class="tl-stats">
-              <div class="tl-stat"><strong>150+</strong><span>reporting processes automated</span></div>
-              <div class="tl-stat"><strong>40+</strong><span>hours saved per month</span></div>
-            </div>
+          <div class="tl-content">
+            <h3>SEB Global Services <span class="tl-role">Derivative Ops Specialist</span></h3>
+            <p>Compliance-heavy financial operations from the inside. Automated 150+ reporting processes. The manual processes that the last five years have been spent replacing with AI.</p>
           </div>
         </div>
 
       </div>
 
-      <div class="edu-bar">
-        <div class="edu-item-inline">
-          <span class="edu-icon-sm">🎓</span>
-          <span><strong>M.Sc.</strong> Business Informatics Sciences · Riga Technical University</span>
-        </div>
-        <div class="edu-sep">·</div>
-        <div class="edu-item-inline">
-          <span class="edu-icon-sm">🎓</span>
-          <span><strong>B.Sc.</strong> Engineering Economics &amp; Statistics · RTU · 2022</span>
-        </div>
-        <div class="edu-sep">·</div>
-        <div class="edu-item-inline">
-          <span class="edu-icon-sm">🌐</span>
-          <span>English C2 · Spanish C1 · German B1</span>
-        </div>
+      <div class="education">
+        <p><strong>M.Sc.</strong> Business Informatics, Riga Technical University &middot; <strong>B.Sc.</strong> Engineering Economics &amp; Statistics &middot; EN C2 &middot; ES C1 &middot; DE B1</p>
       </div>
     </div>
   </section>
 
-  <!-- HOW I THINK -->
-  <section id="principles" class="section principles-section">
+  <!-- THINKING -->
+  <section id="thinking" class="section">
     <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">How I Think</h2>
-        <p class="section-sub">These aren't slogans. Each one is a belief I formed by being wrong first. Click any to see where it came from.</p>
+      <div class="section-header">
+        <h2>How I think</h2>
+        <p class="section-sub">Beliefs formed by being wrong first. Click to expand.</p>
       </div>
+      <div class="principles">
 
-      <div class="principles-grid">
-
-        <div class="principle-card" data-principle="0">
-          <div class="principle-header">
-            <span class="p-number">01</span>
-            <div class="p-content">
-              <h3 class="p-title">Governance before autonomy.</h3>
-              <p class="p-teaser">Agents without guardrails are just expensive bugs.</p>
-            </div>
-            <button class="p-toggle" aria-label="Expand">+</button>
+        <div class="principle" data-idx="0">
+          <div class="principle-head">
+            <h3>Governance before autonomy</h3>
+            <span class="principle-toggle"></span>
           </div>
           <div class="principle-body">
-            <div class="principle-inner">
-              <div class="p-cols">
-                <div class="p-col"><h4 class="p-col-label">The Belief</h4><p>Every agentic system built in regulated environments teaches the same lesson: autonomy is earned, not assumed. The instinct is to give the LLM as much latitude as possible. The reality is that in banking, insurance, and compliance contexts, one silent failure in production costs more than all the time saved automating. Governance and determinism go in first; autonomy unlocks incrementally as trust is established.</p></div>
-                <div class="p-col"><h4 class="p-col-label">Where This Came From</h4><p>Building the Nimbus agentic orchestration layer for banks: KYC refresh, reconciliation, credit ops. The biggest architectural debate was "how much should the agent decide alone?" Pilots with broad tool access revealed failure modes that were silent, hard to trace, and catastrophic for audit. The shift to a strict phase model (Pre-LLM Guardrails → LLM → Post-LLM Guardrails → Tool → HITL → Verification) felt bureaucratic on paper. In production, it was the only thing that made the system trustworthy enough for enterprise sign-off.</p></div>
-              </div>
-              <blockquote class="p-quote">"In regulated systems, the agent's job is to make the human's decision better, not to replace it."</blockquote>
-            </div>
+            <p>Every agentic system in regulated environments teaches the same lesson: autonomy is earned, not assumed. Pilots with broad tool access revealed silent, hard-to-trace failures catastrophic for audit. The strict phase model felt bureaucratic on paper. In production, it was the only thing that made the system trustworthy enough for enterprise sign-off.</p>
           </div>
         </div>
 
-        <div class="principle-card" data-principle="1">
-          <div class="principle-header">
-            <span class="p-number">02</span>
-            <div class="p-content">
-              <h3 class="p-title">Confidence scoring is not optional. It's the product.</h3>
-              <p class="p-teaser">Automation without a fallback is just liability at scale.</p>
-            </div>
-            <button class="p-toggle" aria-label="Expand">+</button>
+        <div class="principle" data-idx="1">
+          <div class="principle-head">
+            <h3>Confidence scoring is the product</h3>
+            <span class="principle-toggle"></span>
           </div>
           <div class="principle-body">
-            <div class="principle-inner">
-              <div class="p-cols">
-                <div class="p-col"><h4 class="p-col-label">The Belief</h4><p>Every LLM-powered extraction or classification pipeline has a failure rate. The question isn't whether it fails. It's whether the system knows when it's failing and routes accordingly. Confidence scoring and structured exception handling aren't engineering nice-to-haves. They're what separates a liability from a product.</p></div>
-                <div class="p-col"><h4 class="p-col-label">Where This Came From</h4><p>Processing 50K+ KYC/AML documents monthly at Schbang: identity proofs, financial statements, variable-quality scans. Pure OCR failed on unstructured content. Pure LLM extraction hallucinated on structured tables. The hybrid pipeline worked only when field-level confidence scoring with exception routing was added. Every document below threshold went to a human queue. The 70% reduction in manual ops came not from removing humans. It came from sending humans only the cases that actually needed them.</p></div>
-              </div>
-              <blockquote class="p-quote">"Confidence scoring is what turns automation from a cost-saver into a decision system."</blockquote>
-            </div>
+            <p>Every LLM pipeline has a failure rate. The question is whether the system knows when it's failing and routes accordingly. Processing 50K+ documents monthly: pure OCR failed on unstructured content, pure LLM hallucinated on structured tables. The hybrid pipeline worked only when field-level confidence scoring with exception routing was added.</p>
           </div>
         </div>
 
-        <div class="principle-card" data-principle="2">
-          <div class="principle-header">
-            <span class="p-number">03</span>
-            <div class="p-content">
-              <h3 class="p-title">The best AI product is the one users forget is AI.</h3>
-              <p class="p-teaser">When AI is done right, it disappears into the experience.</p>
-            </div>
-            <button class="p-toggle" aria-label="Expand">+</button>
+        <div class="principle" data-idx="2">
+          <div class="principle-head">
+            <h3>The best AI product is invisible</h3>
+            <span class="principle-toggle"></span>
           </div>
           <div class="principle-body">
-            <div class="principle-inner">
-              <div class="p-cols">
-                <div class="p-col"><h4 class="p-col-label">The Belief</h4><p>The "AI-powered" label is a liability if the experience underneath it doesn't work. Users in high-stakes situations (filing an insurance claim, submitting a KYC document, doing their onboarding) don't care about the model. They care about whether they got the right answer, whether it was fast, and whether they understood it. The moment they feel like they're interacting with a system rather than getting a job done, trust is broken.</p></div>
-                <div class="p-col"><h4 class="p-col-label">Where This Came From</h4><p>Designing the GROMO AI agent for the B2C insurance app. The temptation was to make the AI identity prominent: chatbot window, "AI says..." headers. The research told a different story. Users in Tier-2/3 cities wanted to renew their policy, find a hospital, start a claim. The design decision was to make AI the engine of every feature (RAG-backed policy cards, OCR ingestion, consent-scoped desk links) and keep the surface layer simple, fast, and jargon-free. The AI worked best when you couldn't see it.</p></div>
-              </div>
-              <blockquote class="p-quote">"If the user notices the AI, you probably haven't finished the product."</blockquote>
-            </div>
+            <p>Users in high-stakes situations don't care about the model. They care about getting the right answer, fast, and understanding it. The "AI-powered" label is a liability if the experience underneath doesn't work. Design the AI as the engine, keep the surface layer simple.</p>
           </div>
         </div>
 
-        <div class="principle-card" data-principle="3">
-          <div class="principle-header">
-            <span class="p-number">04</span>
-            <div class="p-content">
-              <h3 class="p-title">RAG without citation is just confident hallucination.</h3>
-              <p class="p-teaser">In high-stakes domains, users need to see the source, not just the answer.</p>
-            </div>
-            <button class="p-toggle" aria-label="Expand">+</button>
+        <div class="principle" data-idx="3">
+          <div class="principle-head">
+            <h3>RAG without citation is confident hallucination</h3>
+            <span class="principle-toggle"></span>
           </div>
           <div class="principle-body">
-            <div class="principle-inner">
-              <div class="p-cols">
-                <div class="p-col"><h4 class="p-col-label">The Belief</h4><p>Retrieval-augmented generation solves the hallucination problem only if you complete the loop: show users which clause, which document, which sentence the answer came from. Without citation, RAG is just a hallucination with better vocabulary. In domains where the answer has financial or legal consequences (insurance exclusions, credit decisions, compliance flags) unexplained confidence is actively dangerous.</p></div>
-                <div class="p-col"><h4 class="p-col-label">Where This Came From</h4><p>Building explainable policy cards for the insurance app. The brief was "help users understand their coverage." The easy version: ask the LLM, surface the answer. The right version: clause-grounded RAG with citation logic, confidence chips, and a "why?" path for every answer. Users in testing challenged answers they couldn't verify, and trusted answers they could trace. The citation wasn't a legal feature. It was the trust feature.</p></div>
-              </div>
-              <blockquote class="p-quote">"Explainability isn't a compliance checkbox. It's the interface between AI confidence and user trust."</blockquote>
-            </div>
+            <p>In domains where answers have financial or legal consequences, unexplained confidence is actively dangerous. Users in testing challenged answers they couldn't verify and trusted answers they could trace. The citation wasn't a legal feature. It was the trust feature.</p>
           </div>
         </div>
 
-        <div class="principle-card" data-principle="4">
-          <div class="principle-header">
-            <span class="p-number">05</span>
-            <div class="p-content">
-              <h3 class="p-title">Audit trails are the product, not the plumbing.</h3>
-              <p class="p-teaser">In regulated environments, traceability is the feature that closes deals.</p>
-            </div>
-            <button class="p-toggle" aria-label="Expand">+</button>
+        <div class="principle" data-idx="4">
+          <div class="principle-head">
+            <h3>Audit trails are the product</h3>
+            <span class="principle-toggle"></span>
           </div>
           <div class="principle-body">
-            <div class="principle-inner">
-              <div class="p-cols">
-                <div class="p-col"><h4 class="p-col-label">The Belief</h4><p>Every agentic system built for enterprise needs to answer one question from risk/compliance teams before go-live: "what happened, when, and why?" Teams that treat logging as an engineering afterthought discover, usually at the worst moment, that they can't answer it. Auditability designed in from day one, because it's not just compliance overhead. It's what gets the system trusted.</p></div>
-                <div class="p-col"><h4 class="p-col-label">Where This Came From</h4><p>The lead enrichment HITL workflow: n8n + GPT-5 + Claude reviewing 40–80K leads before outreach. The original design sent emails directly after AI review. Stakeholder concern: "what if something goes wrong at scale?" The solution was deceptively simple: write to Gmail drafts, not send. Every draft was auditable, correctable, traceable. That one decision (drafts, not sends) was the trust-building mechanism that unlocked stakeholder buy-in for the entire automation.</p></div>
-              </div>
-              <blockquote class="p-quote">"If you can't explain what the system did and why, you don't have a product. You have a black box."</blockquote>
-            </div>
+            <p>Every agentic system for enterprise needs to answer: "what happened, when, and why?" Teams that treat logging as an afterthought discover they can't answer it at the worst moment. The lead enrichment workflow wrote to Gmail drafts, not sends. That one decision unlocked full stakeholder buy-in for the entire automation.</p>
           </div>
         </div>
 
-        <div class="principle-card" data-principle="5">
-          <div class="principle-header">
-            <span class="p-number">06</span>
-            <div class="p-content">
-              <h3 class="p-title">The best technical decision and the best organizational decision are rarely the same.</h3>
-              <p class="p-teaser">Your job is to find the path that produces the best outcome, not the cleanest architecture.</p>
-            </div>
-            <button class="p-toggle" aria-label="Expand">+</button>
+        <div class="principle" data-idx="5">
+          <div class="principle-head">
+            <h3>Ship the 80% that runs</h3>
+            <span class="principle-toggle"></span>
           </div>
           <div class="principle-body">
-            <div class="principle-inner">
-              <div class="p-cols">
-                <div class="p-col"><h4 class="p-col-label">The Belief</h4><p>Product managers in AI-heavy roles are often the only person in the room who sees both the technical constraints and the organizational dynamics. The trap is optimizing purely for architecture quality and losing the political capital needed to actually ship. The skill is finding the path that produces the best real-world outcome, not the one that would win a design review.</p></div>
-                <div class="p-col"><h4 class="p-col-label">Where This Came From</h4><p>Multiple enterprise sales cycles at Solytics: presenting AI architectures to bank CISOs, CROs, and CTOs who had already formed strong views before the meeting. The cleanest architecture designed was rejected not because it was wrong, but because it required too much change too fast. The version that shipped was 80% as elegant, phased differently, with more human controls in the early stages. It ran in production. The clean version never did.</p></div>
-              </div>
-              <blockquote class="p-quote">"A shipped 80% solution beats an undeployed 100% one every time."</blockquote>
-            </div>
+            <p>The best technical decision and the best organizational decision are rarely the same. The cleanest architecture was rejected not because it was wrong, but because it required too much change too fast. The version that shipped was 80% as elegant. It ran in production. The clean version never did.</p>
           </div>
         </div>
 
@@ -498,150 +259,30 @@
     </div>
   </section>
 
-  <!-- WHAT I PRIORITIZE — PM DILEMMAS -->
-  <section id="dilemmas" class="section dilemmas-section">
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt">
     <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">What I Prioritize</h2>
-        <p class="section-sub">Real tradeoffs made. Actual reasoning. No right answers, only honest ones.</p>
+      <div class="section-header">
+        <h2>Selected projects</h2>
       </div>
+      <div class="projects">
 
-      <div class="dilemmas-list">
-
-        <div class="dilemma-card" data-dilemma="0">
-          <div class="dilemma-header">
-            <div class="dilemma-header-left">
-              <h3 class="dilemma-title">The $40M Decision Your CTO Has Already Made</h3>
-              <div class="dilemma-tags-inline"><span class="dtag">Build vs. Buy</span><span class="dtag">Stakeholder Politics</span></div>
-            </div>
-            <button class="dilemma-toggle">Read the dilemma <span class="d-arrow">→</span></button>
-          </div>
-          <div class="dilemma-body">
-            <div class="dilemma-inner">
-              <div class="d-tags-row"><span class="dtag">Build vs. Buy</span><span class="dtag">Stakeholder Politics</span></div>
-              <div class="d-block"><h4 class="d-label">The Situation</h4><p>It's Q3 planning. Your CTO has informally committed to a major vendor for an AI platform worth $40M over 3 years. Your user research shows the vendor's product doesn't map to how your 50K employees actually work. Engineering says they could build 80% of the functionality in 9 months. The CTO has a personal relationship with the vendor's CEO. You have two weeks to present your recommendation.</p></div>
-              <div class="d-block"><h4 class="d-label">The Options</h4>
-                <div class="options-row">
-                  <div class="option-card unchosen"><span class="opt-letter">A</span><p>Endorse the vendor. Protect the relationship, find workarounds for the gaps.</p></div>
-                  <div class="option-card chosen"><span class="opt-letter">B</span><p>Present a hybrid: buy the core, build the last mile. Reframe it as "maximizing the investment."</p><span class="chosen-chip">Chosen</span></div>
-                  <div class="option-card unchosen"><span class="opt-letter">C</span><p>Make the full case for build internally, with data, and accept the political risk.</p></div>
-                </div>
-              </div>
-              <div class="d-block"><span class="choice-label">Chose Option B</span><p>Option C is the principled move but burns political capital needed for the next 10 decisions. Option A is abdication. The hybrid reframe lets the CTO save face, gets better user outcomes, and creates a forcing function: if the vendor can't meet the integration spec in 6 months, the data justifies pivoting. Playing the long game.</p></div>
-              <div class="d-tradeoff"><h4 class="tradeoff-label">The Tradeoff</h4><p>Short-term completeness traded for organizational trust. The hybrid isn't the ideal product architecture. It's the best product outcome achievable inside a real organization.</p></div>
-              <div class="d-principle-block"><blockquote>"At VP level, the best technical decision and the best organizational decision are rarely the same. Your job is to find the path that produces the best outcome, not the cleanest recommendation."</blockquote></div>
-            </div>
-          </div>
+        <div class="project">
+          <span class="project-tag">Concept to product</span>
+          <h3>AI-native B2C Insurance App</h3>
+          <p>Clause-grounded RAG with citation logic. GROMO AI Agent handling claims, renewals, hospital search. One-Tap Claim Kit with consent-scoped uploads. +60% perceived helpfulness, +25% complete claim submissions.</p>
         </div>
 
-        <div class="dilemma-card" data-dilemma="1">
-          <div class="dilemma-header">
-            <div class="dilemma-header-left">
-              <h3 class="dilemma-title">Ship the Agent or Add Another Guardrail?</h3>
-              <div class="dilemma-tags-inline"><span class="dtag">Agentic Systems</span><span class="dtag">Launch Decisions</span></div>
-            </div>
-            <button class="dilemma-toggle">Read the dilemma <span class="d-arrow">→</span></button>
-          </div>
-          <div class="dilemma-body">
-            <div class="dilemma-inner">
-              <div class="d-tags-row"><span class="dtag">Agentic Systems</span><span class="dtag">Launch Decisions</span></div>
-              <div class="d-block"><h4 class="d-label">The Situation</h4><p>Three weeks from launch of an agentic KYC workflow at a major bank. The agent handles 2,000 document reviews per day. In staging: 94% extraction accuracy. Strong, but a 6% error rate means ~120 wrong extractions daily. Engineering says adding another guardrail layer pushes the timeline by 6 weeks. The business needs to show the AI investment is working. Compliance hasn't formally signed off.</p></div>
-              <div class="d-block"><h4 class="d-label">The Options</h4>
-                <div class="options-row">
-                  <div class="option-card unchosen"><span class="opt-letter">A</span><p>Ship with 94% accuracy. Add monitoring and fix in prod.</p></div>
-                  <div class="option-card unchosen"><span class="opt-letter">B</span><p>Add the guardrail layer. Push 6 weeks. Brief the business on why.</p></div>
-                  <div class="option-card chosen"><span class="opt-letter">C</span><p>Ship with 94% accuracy but route all low-confidence cases to human review, reducing automation from 100% to ~70%.</p><span class="chosen-chip">Chosen</span></div>
-                </div>
-              </div>
-              <div class="d-block"><span class="choice-label">Chose Option C</span><p>Option A is "move fast and hope." In a regulated environment, a silent error at scale is a compliance event, not a product bug. Option B is the right architecture but kills business momentum at the worst time. Option C is the honest answer: ship a system that works well enough, as long as the limits are explicit. The 70% automation rate is still transformational. The 30% human review is a feature. It's the confidence boundary made visible.</p></div>
-              <div class="d-tradeoff"><h4 class="tradeoff-label">The Tradeoff</h4><p>The headline number (100% automation) traded for a system compliance could actually sign off. The 70% became the story used to build trust. Six months later, with training data from the human review queue, 97% was reached and the queue was removed.</p></div>
-              <div class="d-principle-block"><blockquote>"The confidence boundary is not a weakness to hide. It's the honest edge of your system, and the most important thing to make visible."</blockquote></div>
-            </div>
-          </div>
+        <div class="project">
+          <span class="project-tag">Internal tooling</span>
+          <h3>LLM Evaluator: Golden Dataset Platform</h3>
+          <p>Exact match, cosine similarity, and LLM-as-judge scoring. Repeatable evaluation cycles before every deployment. Analytics dashboard for model performance drift and confidence calibration.</p>
         </div>
 
-        <div class="dilemma-card" data-dilemma="2">
-          <div class="dilemma-header">
-            <div class="dilemma-header-left">
-              <h3 class="dilemma-title">The Feature Users Asked For vs. The One They Actually Need</h3>
-              <div class="dilemma-tags-inline"><span class="dtag">User Research</span><span class="dtag">Prioritization</span></div>
-            </div>
-            <button class="dilemma-toggle">Read the dilemma <span class="d-arrow">→</span></button>
-          </div>
-          <div class="dilemma-body">
-            <div class="dilemma-inner">
-              <div class="d-tags-row"><span class="dtag">User Research</span><span class="dtag">Prioritization</span></div>
-              <div class="d-block"><h4 class="d-label">The Situation</h4><p>B2C insurance app. Unanimous user feedback: they want a price comparison feature. #1 request for two quarters. Analytics show 67% of churned users left during the renewal flow, not purchase. Exit surveys: "I didn't understand what I was renewing." The comparison feature: 10 weeks. Fixing the renewal flow (explainable policy summaries, document status chips, one-tap autopay): 4 weeks.</p></div>
-              <div class="d-block"><h4 class="d-label">The Options</h4>
-                <div class="options-row">
-                  <div class="option-card unchosen"><span class="opt-letter">A</span><p>Build the comparison feature. Users asked for it. Deliver what they want.</p></div>
-                  <div class="option-card chosen"><span class="opt-letter">B</span><p>Fix the renewal flow. Address what the data says is actually causing churn.</p><span class="chosen-chip">Chosen</span></div>
-                  <div class="option-card unchosen"><span class="opt-letter">C</span><p>Do both: a lighter comparison (link-out) + the renewal flow fix.</p></div>
-                </div>
-              </div>
-              <div class="d-block"><span class="choice-label">Chose Option B</span><p>Users asked for comparison because they were trying to solve a trust problem, not a price problem. "Am I getting a good deal?" is the surface question. The real one is "do I understand what I have?" Comparison gives the illusion of control. Explainable policy summaries give actual understanding. The churn data was unambiguous: 67% left at renewal. Building the comparison feature would have been building the wrong thing faster.</p></div>
-              <div class="d-tradeoff"><h4 class="tradeoff-label">The Tradeoff</h4><p>The most-requested feature deferred for a full quarter. The conversation with stakeholders was uncomfortable. The renewal fix shipped in 4 weeks, churn dropped, and the comparison feature went on the roadmap with better-defined requirements from what we learned.</p></div>
-              <div class="d-principle-block"><blockquote>"Users tell you what they want. Data tells you what they need. The job is to know the difference, and explain why you chose one over the other."</blockquote></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- WEEKEND BUILDS & EARLY WORK -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">Weekend Builds &amp; Early Work</h2>
-        <p class="section-sub">Built to solve recurring problems. Each became a reference design for production work later.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <div class="proj-header">
-            <div class="proj-tags"><span class="ptag">B2C</span><span class="ptag">Insurance</span><span class="ptag">Agentic</span></div>
-            <span class="proj-type">Concept → Full product design</span>
-          </div>
-          <h3 class="proj-title">AI-native B2C Insurance App</h3>
-          <p class="proj-summary">An AI-first insurance wallet where the AI is the engine of every feature, invisible in the UI, doing the work behind every card, claim, and renewal. Built for users in Tier-2/3 cities who want to renew their policy, not have a conversation with a chatbot.</p>
-          <ul class="proj-bullets">
-            <li>Clause-grounded RAG + citation logic: users can see exactly which clause any answer came from</li>
-            <li>GROMO AI Agent (chat + voice) that executes claims, renewals, and hospital network search with structured confirmation flows</li>
-            <li>One-Tap Claim Kit with consent-scoped upload links, reducing documentation friction</li>
-            <li><strong>Measured outcome: +60% perceived helpfulness · +25% complete claim submissions</strong></li>
-          </ul>
-        </div>
-
-        <div class="project-card">
-          <div class="proj-header">
-            <div class="proj-tags"><span class="ptag">LLMOps</span><span class="ptag">Evaluation</span><span class="ptag">Reliability</span></div>
-            <span class="proj-type">Internal tooling</span>
-          </div>
-          <h3 class="proj-title">LLM Evaluator: Golden Dataset Platform</h3>
-          <p class="proj-summary">Built after watching teams ship models without a way to know when they'd regressed. A framework that tells you when your model is drifting before your users find out.</p>
-          <ul class="proj-bullets">
-            <li>Exact match, cosine similarity, and LLM-as-judge scoring: three different failure modes, three detection signals</li>
-            <li>Repeatable evaluation cycles before every deployment; systematic regression testing, not ad-hoc</li>
-            <li>Analytics dashboard for model performance drift and confidence calibration over time</li>
-          </ul>
-        </div>
-
-        <div class="project-card">
-          <div class="proj-header">
-            <div class="proj-tags"><span class="ptag">HITL</span><span class="ptag">n8n</span><span class="ptag">Agentic</span></div>
-            <span class="proj-type">Built &amp; deployed</span>
-          </div>
-          <h3 class="proj-title">Autonomous Lead Enrichment + HITL</h3>
-          <p class="proj-summary">Agentic workflow that scaled outreach without scaling errors. The key insight: drafts, not sends. Every AI output auditable before it goes anywhere. That one decision unlocked full stakeholder buy-in.</p>
-          <ul class="proj-bullets">
-            <li>n8n + GPT-5 enrichment · Claude MCP structured review before any outreach</li>
-            <li>Gmail draft creation: every output auditable, correctable, traceable</li>
-            <li>40–80K leads reviewed at scale with quality controls maintained end-to-end</li>
-            <li><strong>Result: 70% faster lead closures for SMBs</strong></li>
-          </ul>
+        <div class="project">
+          <span class="project-tag">Built &amp; deployed</span>
+          <h3>Autonomous Lead Enrichment + HITL</h3>
+          <p>n8n + GPT-5 enrichment, Claude MCP structured review. Gmail draft creation for full auditability. 40-80K leads reviewed at scale. 70% faster lead closures for SMBs.</p>
         </div>
 
       </div>
@@ -650,17 +291,16 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div>
-          <div class="footer-name">Vilol Joshi</div>
-          <div class="footer-sub">Technical AI Product Manager · Berlin &amp; Mumbai</div>
-        </div>
-        <div class="footer-links">
-          <a href="mailto:viloljoshi10@gmail.com">viloljoshi10@gmail.com</a>
-          <a href="https://calendly.com/joshivilol1011/exploring-opportunities" target="_blank">Book a call →</a>
-          <a href="https://www.notion.so/21453237098280fdbd6cddf1848c6c35?v=21453237098281468391000cf1b9581b" target="_blank">AI Portfolio →</a>
-        </div>
+    <div class="container footer-inner">
+      <div>
+        <span class="footer-name">Vilol Joshi</span>
+        <span class="footer-sep">&middot;</span>
+        <span class="footer-title">Berlin &amp; Mumbai</span>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:viloljoshi10@gmail.com">Email</a>
+        <a href="https://calendly.com/joshivilol1011/exploring-opportunities" target="_blank">Calendly</a>
+        <a href="https://www.notion.so/21453237098280fdbd6cddf1848c6c35?v=21453237098281468391000cf1b9581b" target="_blank">Portfolio</a>
       </div>
     </div>
   </footer>

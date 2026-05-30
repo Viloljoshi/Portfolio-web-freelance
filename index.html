@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vilol Joshi · Freelance AI Platform & Solutions Architect</title>
-  <meta name="description" content="Freelance Technical AI Product Manager. I design and ship AI platforms and tailored solutions for finance, manufacturing, insurance, and regulated industries.">
+  <title>Vilol Joshi · AI Platforms & Tailored Solutions</title>
+  <meta name="description" content="I design and ship AI platforms and tailored solutions for finance, manufacturing, insurance, and regulated industries.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -26,15 +26,33 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#top" class="nav-logo"><span class="nav-mark"></span>Vilol Joshi</a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
         <li><a href="#features">Modules</a></li>
         <li><a href="#industries">Industries</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#usecases">Use Cases</a></li>
         <li><a href="#engagement">Engage</a></li>
       </ul>
-      <a href="https://calendly.com/joshivilol1011/exploring-opportunities" target="_blank" class="nav-cta" data-magnetic><span>Book a call</span> <span>→</span></a>
+      <div class="nav-right">
+        <a href="https://calendly.com/joshivilol1011/exploring-opportunities" target="_blank" class="nav-cta" data-magnetic><span>Book a call</span> <span>→</span></a>
+        <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-drawer" id="navDrawer">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#features">Modules</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#usecases">Use Cases</a></li>
+        <li><a href="#engagement">Engage</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -44,7 +62,6 @@
     <section class="hero" id="hero">
       <div class="hero-toprow">
         <span class="pill"><span class="pulse"></span>Available for freelance · Q3 onwards</span>
-        <span class="pill mono">Technical AI PM · Freelance</span>
       </div>
 
       <h1 class="hero-title">
@@ -53,7 +70,7 @@
       </h1>
 
       <p class="hero-inventory">
-        <span class="inv-lead">Vilol Joshi · Freelance Technical AI PM. Most of my work is solving for</span>
+        <span class="inv-lead">Vilol Joshi. Most of my work is solving for</span>
         <span class="inv-list">
           <span class="inv-rotator" id="invRotator" aria-live="polite"><span class="word in">the eval no one wrote.</span></span>
         </span>
@@ -186,7 +203,7 @@
       </div>
     </section>
 
-    <!-- FEATURES BAND — finance & manufacturing modules -->
+    <!-- FEATURES BAND : finance and manufacturing modules -->
     <section class="block" id="features" style="padding-top: 0;">
       <div class="wrap">
         <div class="features-band reveal">
@@ -195,7 +212,7 @@
           <div class="features-grid">
             <div class="feature-item">
               <h4>Vendor Screener</h4>
-              <p>Verify vendor compliance docs against your checklist — automatically, in parallel. PAN, GST, ISO certs, bank proofs cross-checked, flagged, and routed.</p>
+              <p>Verify vendor compliance docs against your checklist, automatically and in parallel. PAN, GST, ISO certs, bank proofs cross-checked, flagged, and routed.</p>
             </div>
             <div class="feature-item">
               <h4>Accounts Payable</h4>
@@ -207,7 +224,7 @@
             </div>
             <div class="feature-item">
               <h4>Agentic Reconciliation</h4>
-              <p>AI agents that build the balance bridge, stress-test it, and deliver CFO-ready reports. Bank, ledger, intercompany — reconciled with full audit trail.</p>
+              <p>AI agents that build the balance bridge, stress-test it, and deliver CFO-ready reports. Bank, ledger, intercompany, all reconciled with a full audit trail.</p>
             </div>
             <div class="feature-item">
               <h4>Secure Document Vault</h4>
@@ -215,7 +232,7 @@
             </div>
             <div class="feature-item">
               <h4>Workflow Agents (Nova-class)</h4>
-              <p>Connect Gmail, Slack, Sheets, Drive, Jira and more — let agents run finance and ops workflows end-to-end with human checkpoints where they matter.</p>
+              <p>Connect Gmail, Slack, Sheets, Drive, Jira and more. Agents run finance and ops workflows end to end, with human checkpoints where they matter.</p>
             </div>
             <div class="feature-item">
               <h4>Quality Inspection AI</h4>
@@ -223,7 +240,7 @@
             </div>
             <div class="feature-item">
               <h4>Supplier Compliance Hub</h4>
-              <p>Multi-format extraction across supplier certificates, RoHS, REACH, conflict minerals. Exception routing into your existing PLM or ERP — no rip-and-replace.</p>
+              <p>Multi-format extraction across supplier certificates, RoHS, REACH, conflict minerals. Exception routing into your existing PLM or ERP, no rip-and-replace.</p>
             </div>
             <div class="feature-item">
               <h4>Maintenance &amp; Asset Triage</h4>
@@ -233,7 +250,7 @@
         </div>
 
         <div class="quote-card reveal">
-          <p>Governance before autonomy. Agents without guardrails are just expensive bugs — especially in regulated industries.</p>
+          <p>Governance before autonomy. Agents without guardrails are just expensive bugs, especially in regulated industries.</p>
           <div class="qsub">How I approach every agentic system</div>
         </div>
       </div>
@@ -338,7 +355,7 @@
           <div class="process-step reveal delay-1">
             <div class="process-num">02</div>
             <h4>Architecture &amp; guardrail design</h4>
-            <p>Pre-LLM guardrails, model selection, post-LLM validation, tool calls, HITL queues, verification. Designed with your security team in the room — not presented to them afterwards.</p>
+            <p>Pre-LLM guardrails, model selection, post-LLM validation, tool calls, HITL queues, verification. Designed with your security team in the room, not presented to them afterwards.</p>
           </div>
           <div class="process-step reveal delay-2">
             <div class="process-num">03</div>
@@ -348,7 +365,7 @@
           <div class="process-step reveal">
             <div class="process-num">04</div>
             <h4>Evaluation framework first</h4>
-            <p>Golden dataset, regression suite, and observability wired in before scaling. You ship a system that knows when it's failing — not one that needs a customer to tell you.</p>
+            <p>Golden dataset, regression suite, and observability wired in before scaling. You ship a system that knows when it's failing, not one that needs a customer to tell you.</p>
           </div>
           <div class="process-step reveal delay-1">
             <div class="process-num">05</div>
@@ -392,7 +409,7 @@
             </div>
             <ul class="exp-bullets">
               <li>Designed agentic orchestration with strict governance: Pre-LLM Guardrails → LLM → Post-LLM Guardrails → Tool → HITL → Verification</li>
-              <li>Fine-tuned models for KYC, credit reports, and regulatory filings — reducing false positives in compliance flags</li>
+              <li>Fine-tuned models for KYC, credit reports, and regulatory filings, reducing false positives in compliance flags</li>
               <li>Built OCR + LLM hybrid pipeline for high-volume document review, enabling faster enterprise client onboarding</li>
               <li>Led AI architecture demos with bank CISOs, CROs, and CTOs, supporting $15M enterprise pipeline</li>
             </ul>
@@ -408,7 +425,7 @@
             </div>
             <h3 class="exp-company">Ogilvy</h3>
             <div class="exp-role">AI Product Manager</div>
-            <p class="exp-desc">Owned the AI product roadmap for "Sing it with Milka", a generative AI campaign proving that AI at scale can move real revenue — not just engagement metrics.</p>
+            <p class="exp-desc">Owned the AI product roadmap for "Sing it with Milka", a generative AI campaign proving that AI at scale can move real revenue, not just engagement metrics.</p>
             <div class="exp-metrics">
               <div><div class="em-num">54M+</div><div class="em-label">unique AI music generations</div></div>
               <div><div class="em-num">9%</div><div class="em-label">global revenue uplift for Milka</div></div>
@@ -520,11 +537,163 @@
       </div>
     </section>
 
+    <!-- USE CASES -->
+    <section class="block" id="usecases">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">07 / Use Cases We Have Shipped</span>
+          <div>
+            <h2 class="sec-title">Real systems, <span class="em">real outcomes.</span> Not slideware.</h2>
+            <p class="sec-sub">A representative slice of the work, organized by domain. Each one ran in production, was reviewed by the relevant risk or compliance team, and produced measurable outcomes.</p>
+          </div>
+        </div>
+
+        <div class="uc-grid">
+
+          <article class="uc-card reveal">
+            <div class="uc-meta">
+              <span class="uc-domain">Banking &amp; Compliance</span>
+              <span class="uc-result">45% review effort cut</span>
+            </div>
+            <h3 class="uc-title">Agentic KYC and AML platform for enterprise banks</h3>
+            <p class="uc-desc">Replaced static rule-based compliance modules with an LLM-powered agentic stack. Six-phase governance model with Pre-LLM and Post-LLM guardrails, HITL queues for low-confidence cases, and full audit trail for regulatory review.</p>
+            <ul class="uc-bullets">
+              <li>50K plus documents reviewed monthly with field-level confidence scoring</li>
+              <li>65% increase in UDF agent adoption across business units</li>
+              <li>$15M enterprise sales pipeline supported via the same architecture demos</li>
+            </ul>
+            <div class="uc-tags"><span>Agentic</span><span>KYC/AML</span><span>HITL</span><span>Audit Trail</span></div>
+          </article>
+
+          <article class="uc-card reveal delay-1">
+            <div class="uc-meta">
+              <span class="uc-domain">Finance &amp; CFO Office</span>
+              <span class="uc-result">70% less manual ops</span>
+            </div>
+            <h3 class="uc-title">Vendor screening and AP automation for a finance team</h3>
+            <p class="uc-desc">Parallel verification of vendor compliance docs (PAN, GST, ISO, bank proofs) against a configurable checklist. Three-way matched invoice intake with exception queues that learn from reviewer corrections.</p>
+            <ul class="uc-bullets">
+              <li>Cycle time from vendor submission to approved status reduced by half</li>
+              <li>GL coding accuracy stabilized above 96% with HITL on borderline cases</li>
+              <li>Cleaner data into the ERP, fewer downstream reconciliation breaks</li>
+            </ul>
+            <div class="uc-tags"><span>Vendor Ops</span><span>AP</span><span>3-Way Match</span></div>
+          </article>
+
+          <article class="uc-card reveal delay-2">
+            <div class="uc-meta">
+              <span class="uc-domain">Finance &amp; Tax</span>
+              <span class="uc-result">Days to minutes</span>
+            </div>
+            <h3 class="uc-title">GST reconciliation and agentic balance sheet bridge</h3>
+            <p class="uc-desc">GSTR-2A and 2B matched against the purchase register in minutes. Agentic reconciliation across bank, ledger, and intercompany, producing a CFO-ready bridge with traceable journal-level evidence.</p>
+            <ul class="uc-bullets">
+              <li>ITC mismatch detection automated with vendor non-filing alerts</li>
+              <li>Monthly close shortened by removing the largest manual swim lane</li>
+              <li>Every adjustment links back to a source document and reasoning trace</li>
+            </ul>
+            <div class="uc-tags"><span>GST</span><span>Reconciliation</span><span>Close Cycle</span></div>
+          </article>
+
+          <article class="uc-card reveal">
+            <div class="uc-meta">
+              <span class="uc-domain">Manufacturing &amp; Quality</span>
+              <span class="uc-result">Audit ready by default</span>
+            </div>
+            <h3 class="uc-title">Vision and LLM quality inspection with NCR routing</h3>
+            <p class="uc-desc">Shop floor cameras feed a vision model for defect detection. An LLM agent drafts the non-conformance report, classifies root cause against your taxonomy, and routes to the right engineer with ISO and AS9100 evidence packs attached.</p>
+            <ul class="uc-bullets">
+              <li>NCR drafting time reduced from hours to minutes per incident</li>
+              <li>First-pass yield and CAPA tracking surfaced for plant leadership</li>
+              <li>Audit evidence assembled automatically from production records</li>
+            </ul>
+            <div class="uc-tags"><span>Vision + LLM</span><span>NCR</span><span>ISO/AS9100</span></div>
+          </article>
+
+          <article class="uc-card reveal delay-1">
+            <div class="uc-meta">
+              <span class="uc-domain">Manufacturing &amp; Supply Chain</span>
+              <span class="uc-result">Multi-format ingestion</span>
+            </div>
+            <h3 class="uc-title">Supplier compliance hub with PLM and ERP integration</h3>
+            <p class="uc-desc">Mixed PDFs, scans, and spreadsheets for RoHS, REACH, conflict minerals, and quality certs parsed into a structured supplier compliance record. Exceptions routed into the existing PLM and ERP without a system swap.</p>
+            <ul class="uc-bullets">
+              <li>Supplier onboarding cycle measurably shorter for procurement</li>
+              <li>Audit lookups answered in seconds with citation back to the source PDF</li>
+              <li>Recurring red flags caught earlier in the qualification process</li>
+            </ul>
+            <div class="uc-tags"><span>Supplier Ops</span><span>RoHS/REACH</span><span>PLM/ERP</span></div>
+          </article>
+
+          <article class="uc-card reveal delay-2">
+            <div class="uc-meta">
+              <span class="uc-domain">Insurance</span>
+              <span class="uc-result">+25% claim completion</span>
+            </div>
+            <h3 class="uc-title">AI-native B2C insurance app with explainable RAG</h3>
+            <p class="uc-desc">Conversational AI agent for renewals, claims, and hospital network search, grounded in clause-level RAG with citations. The AI engine sits behind every card, invisible in the UI, with confidence chips on every answer.</p>
+            <ul class="uc-bullets">
+              <li>+25% complete claim submissions with one-tap consent-scoped upload</li>
+              <li>+60% perceived helpfulness in user research</li>
+              <li>Every answer traceable to the source clause in the policy document</li>
+            </ul>
+            <div class="uc-tags"><span>RAG</span><span>Conversational AI</span><span>Citation</span></div>
+          </article>
+
+          <article class="uc-card reveal">
+            <div class="uc-meta">
+              <span class="uc-domain">Sales &amp; Ops</span>
+              <span class="uc-result">40 to 80K leads handled</span>
+            </div>
+            <h3 class="uc-title">Autonomous lead enrichment with HITL Gmail drafts</h3>
+            <p class="uc-desc">n8n plus GPT-5 enrichment, structured review with Claude MCP, then Gmail draft creation rather than direct send. Every AI output is auditable, correctable, and traceable before anything leaves the org.</p>
+            <ul class="uc-bullets">
+              <li>70% faster lead closures for SMB customers</li>
+              <li>Drafts not sends became the stakeholder trust mechanism</li>
+              <li>Reusable HITL pattern across other outbound workflows</li>
+            </ul>
+            <div class="uc-tags"><span>n8n</span><span>HITL</span><span>Workflow Ops</span></div>
+          </article>
+
+          <article class="uc-card reveal delay-1">
+            <div class="uc-meta">
+              <span class="uc-domain">B2C and Brand</span>
+              <span class="uc-result">54M+ users reached</span>
+            </div>
+            <h3 class="uc-title">Generative AI campaign at global brand scale</h3>
+            <p class="uc-desc">An AI-native consumer campaign generating tens of millions of personalized outputs across markets. Productized roadmap, structured release cadence, and data workflows that turned a campaign idea into a measurable revenue lever.</p>
+            <ul class="uc-bullets">
+              <li>54M+ unique AI music generations across markets</li>
+              <li>9% revenue uplift attributed to the campaign</li>
+              <li>35% reduction in manual reporting through structured data flows</li>
+            </ul>
+            <div class="uc-tags"><span>Generative AI</span><span>B2C</span><span>Scale</span></div>
+          </article>
+
+          <article class="uc-card reveal delay-2">
+            <div class="uc-meta">
+              <span class="uc-domain">Reliability</span>
+              <span class="uc-result">Catches drift early</span>
+            </div>
+            <h3 class="uc-title">LLM evaluation harness with golden dataset and drift monitoring</h3>
+            <p class="uc-desc">A framework that tells you when your model has regressed before your users do. Exact match, cosine similarity, and LLM-as-judge scoring wired into CI, with dashboards for calibration and drift over time.</p>
+            <ul class="uc-bullets">
+              <li>Repeatable evaluation cycles before every deployment</li>
+              <li>Systematic regression testing replaces ad-hoc spot checks</li>
+              <li>Confidence calibration tracked across releases, not lost between them</li>
+            </ul>
+            <div class="uc-tags"><span>Golden Dataset</span><span>Drift</span><span>LLM-as-Judge</span></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ENGAGEMENT MODELS -->
     <section class="block" id="engagement">
       <div class="wrap">
         <div class="sec-head reveal">
-          <span class="eyebrow">07 / Engagement Models</span>
+          <span class="eyebrow">08 / Engagement Models</span>
           <div>
             <h2 class="sec-title">How we work together. <span class="em">Pick the shape</span> that fits your problem.</h2>
             <p class="sec-sub">Every engagement starts with a paid two-week discovery. After that, you choose the model. No long retainer lock-ins.</p>
@@ -540,45 +709,38 @@
               <li>Failure-mode mapping for your use case</li>
               <li>Architecture sketch with build vs. buy options</li>
               <li>Cost + risk model for the CFO/CTO</li>
-              <li>Written recommendation &amp; phased roadmap</li>
+              <li>Written recommendation and phased roadmap</li>
             </ul>
-            <div class="eng-foot">
-              <span class="eng-window">Engagement</span>
-              <span class="eng-time">2 weeks</span>
-            </div>
           </div>
 
           <div class="eng-card featured reveal delay-1">
             <div class="eng-name">Platform Build Partnership</div>
             <div class="eng-tagline">Architect, ship, hand over</div>
             <ul>
-              <li>Full agentic platform design + governance</li>
+              <li>Full agentic platform design plus governance</li>
               <li>Working prototype on your real data</li>
-              <li>Evaluation harness &amp; observability wired in</li>
+              <li>Evaluation harness and observability wired in</li>
               <li>Phased rollout with HITL stages</li>
-              <li>Team enablement &amp; runbook handover</li>
+              <li>Team enablement and runbook handover</li>
             </ul>
-            <div class="eng-foot">
-              <span class="eng-window">Engagement</span>
-              <span class="eng-time">8–16 weeks</span>
-            </div>
           </div>
 
           <div class="eng-card reveal delay-2">
             <div class="eng-name">Fractional AI Product Lead</div>
             <div class="eng-tagline">For teams scaling AI without a head of AI</div>
             <ul>
-              <li>2–3 days/week as your AI product partner</li>
-              <li>Roadmap, prioritization &amp; vendor reviews</li>
+              <li>Embedded with your team as AI product partner</li>
+              <li>Roadmap, prioritization, and vendor reviews</li>
               <li>Stakeholder management with C-suite</li>
-              <li>Coaching for in-house PMs &amp; engineers</li>
+              <li>Coaching for in-house PMs and engineers</li>
               <li>Monthly business review with execs</li>
             </ul>
-            <div class="eng-foot">
-              <span class="eng-window">Engagement</span>
-              <span class="eng-time">Rolling · 3-month minimum</span>
-            </div>
           </div>
+        </div>
+
+        <div class="eng-cta reveal">
+          <a href="https://calendly.com/joshivilol1011/exploring-opportunities" target="_blank" class="btn btn-primary" data-magnetic><span>Book a 30-min call</span> <span class="arrow">→</span></a>
+          <a href="mailto:viloljoshi10@gmail.com" class="btn btn-ghost"><span>Email instead</span> <span class="arrow">→</span></a>
         </div>
       </div>
     </section>
@@ -589,7 +751,7 @@
         <div class="contact-card reveal">
           <div class="contact-head">
             <h2 class="contact-big">Let's <em>build something</em> real.</h2>
-            <p class="contact-desc">If you're scoping an AI platform, drowning in document ops, or trying to get governance right before you scale — that's the conversation I'd like to have. The first call is free and useful.</p>
+            <p class="contact-desc">If you're scoping an AI platform, drowning in document ops, or trying to get governance right before you scale, that's the conversation I'd like to have. The first call is free and useful.</p>
           </div>
 
           <div class="contact-list">
@@ -618,7 +780,7 @@
     <footer class="footer">
       <div class="wrap">
         <div class="footer-inner">
-          <span>© 2026 Vilol Joshi · Freelance Technical AI Product Manager</span>
+          <span>© 2026 Vilol Joshi · AI Product &amp; Platform Consulting</span>
           <span>Available for freelance · Berlin / Mumbai / Remote</span>
         </div>
       </div>

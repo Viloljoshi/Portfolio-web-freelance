@@ -1,10 +1,30 @@
-/* Reveal on scroll */
+/* Reveal on scroll — gentler threshold on mobile so content flows in */
+const isTouch = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
   });
-}, { threshold: 0.12 });
+}, { threshold: isTouch ? 0.06 : 0.12, rootMargin: isTouch ? "0px 0px -8% 0px" : "0px" });
 document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+/* Mobile nav drawer */
+const burger = document.getElementById("navBurger");
+const navEl = document.getElementById("nav");
+const drawer = document.getElementById("navDrawer");
+if (burger && navEl && drawer) {
+  const closeDrawer = () => {
+    navEl.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  };
+  burger.addEventListener("click", () => {
+    const open = navEl.classList.toggle("open");
+    burger.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+  drawer.querySelectorAll("a").forEach(a => a.addEventListener("click", closeDrawer));
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeDrawer(); });
+}
 
 /* Scroll progress + nav state */
 const scrollBar = document.getElementById("scrollBar");

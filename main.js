@@ -1,127 +1,137 @@
-/* ============================================================
-   NAVIGATION — sticky scroll + hamburger
-   ============================================================ */
-const nav = document.getElementById('nav');
-const hamburger = document.getElementById('navHamburger');
-const navLinks = document.getElementById('navLinks');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
-// Close mobile menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
-
-/* ============================================================
-   PRINCIPLE CARDS — accordion (only one open at a time)
-   When a card expands, it spans 2 columns via .open class.
-   ============================================================ */
-const principleCards = document.querySelectorAll('.principle-card');
-
-principleCards.forEach(card => {
-  const header = card.querySelector('.principle-header');
-  const body = card.querySelector('.principle-body');
-
-  header.addEventListener('click', () => {
-    const isOpen = card.classList.contains('open');
-
-    // Close all
-    principleCards.forEach(c => {
-      c.classList.remove('open');
-      c.querySelector('.principle-body').style.maxHeight = '0';
-    });
-
-    // Open clicked (if it was closed)
-    if (!isOpen) {
-      card.classList.add('open');
-      const inner = body.querySelector('.principle-inner');
-      body.style.maxHeight = inner.scrollHeight + 32 + 'px';
-
-      // Smooth scroll so the card is visible
-      setTimeout(() => {
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 50);
-    }
+/* Reveal on scroll */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
   });
-});
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 
-/* ============================================================
-   DILEMMA CARDS — accordion (only one open at a time)
-   ============================================================ */
-const dilemmaCards = document.querySelectorAll('.dilemma-card');
+/* Scroll progress + nav state */
+const scrollBar = document.getElementById("scrollBar");
+const nav = document.getElementById("nav");
+const onScroll = () => {
+  const h = document.documentElement;
+  const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  if (scrollBar) scrollBar.style.width = scrolled + "%";
+  if (nav) nav.classList.toggle("scrolled", h.scrollTop > 24);
+};
+document.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
 
-dilemmaCards.forEach(card => {
-  const header = card.querySelector('.dilemma-header');
-  const body = card.querySelector('.dilemma-body');
-
-  header.addEventListener('click', () => {
-    const isOpen = card.classList.contains('open');
-
-    // Close all
-    dilemmaCards.forEach(c => {
-      c.classList.remove('open');
-      c.querySelector('.dilemma-body').style.maxHeight = '0';
-    });
-
-    // Open clicked (if it was closed)
-    if (!isOpen) {
-      card.classList.add('open');
-      const inner = body.querySelector('.dilemma-inner');
-      body.style.maxHeight = inner.scrollHeight + 56 + 'px';
-
-      setTimeout(() => {
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 50);
-    }
-  });
-});
-
-/* ============================================================
-   ACTIVE NAV LINK — highlight current section
-   ============================================================ */
-const sections = document.querySelectorAll('section[id]');
-const navLinkEls = document.querySelectorAll('.nav-link');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute('id');
-      navLinkEls.forEach(link => {
-        link.style.color = '';
-        if (link.getAttribute('href') === `#${id}`) {
-          link.style.color = 'var(--text)';
-        }
-      });
-    }
-  });
-}, { rootMargin: '-30% 0px -60% 0px' });
-
-sections.forEach(s => observer.observe(s));
-
-/* ============================================================
-   AVATAR UPLOAD — click to replace, persists via localStorage
-   ============================================================ */
-const avatarEl = document.getElementById('avatarEl');
-const avatarUpload = document.getElementById('avatarUpload');
-
-// Restore saved photo on load
-const savedAvatar = localStorage.getItem('avatarImage');
-if (savedAvatar) {
-  avatarEl.innerHTML = `<img src="${savedAvatar}" alt="Profile photo"><span class="avatar-edit-hint">EDIT</span>`;
+/* Cursor-tracking gradient blob */
+const cursorBlob = document.getElementById("cursorBlob");
+if (cursorBlob) {
+  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  let cx = mx, cy = my;
+  let hue = 0;
+  document.addEventListener("mousemove", e => { mx = e.clientX; my = e.clientY; });
+  function tickBlob() {
+    cx += (mx - cx) * 0.08;
+    cy += (my - cy) * 0.08;
+    hue = (hue + 0.4) % 360;
+    cursorBlob.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+    cursorBlob.style.background = `conic-gradient(from ${hue}deg, rgba(210,63,12,0.45), rgba(255,106,44,0.4), rgba(201,138,22,0.4), rgba(13,106,106,0.35), rgba(210,63,12,0.45))`;
+    requestAnimationFrame(tickBlob);
+  }
+  tickBlob();
 }
 
-avatarEl.addEventListener('click', () => avatarUpload.click());
-
-avatarUpload.addEventListener('change', (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = (ev) => {
-    const dataUrl = ev.target.result;
-    avatarEl.innerHTML = `<img src="${dataUrl}" alt="Profile photo"><span class="avatar-edit-hint">EDIT</span>`;
-    localStorage.setItem('avatarImage', dataUrl);
-  };
-  reader.readAsDataURL(file);
+/* Per-card spotlight on hm cards */
+document.querySelectorAll(".hm").forEach(card => {
+  card.addEventListener("mousemove", e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100) + "%");
+    card.style.setProperty("--my", ((e.clientY - r.top) / r.height * 100) + "%");
+  });
 });
+
+/* Magnetic buttons */
+document.querySelectorAll("[data-magnetic], .nav-cta").forEach(btn => {
+  btn.addEventListener("mousemove", (e) => {
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width / 2;
+    const y = e.clientY - r.top - r.height / 2;
+    btn.style.transform = `translate(${x * 0.18}px, ${y * 0.22}px)`;
+  });
+  btn.addEventListener("mouseleave", () => { btn.style.transform = ""; });
+});
+
+/* Animated number counters */
+function animateCount(el) {
+  const target = parseFloat(el.dataset.count);
+  const prefix = el.dataset.prefix || "";
+  const suffix = el.dataset.suffix || "";
+  const duration = 1600;
+  const start = performance.now();
+  function step(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    const val = target * eased;
+    const display = (target % 1 === 0) ? Math.round(val) : val.toFixed(1);
+    el.textContent = prefix + display + suffix;
+    if (t < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+const countIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { animateCount(e.target); countIO.unobserve(e.target); }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll("[data-count]").forEach(el => countIO.observe(el));
+
+/* Subtle parallax on blobs */
+const blobs = document.querySelectorAll(".blob.b1, .blob.b2, .blob.b3, .blob.b4");
+document.addEventListener("mousemove", e => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 2;
+  const y = (e.clientY / window.innerHeight - 0.5) * 2;
+  blobs.forEach((b, i) => {
+    const f = (i + 1) * 6;
+    b.style.translate = `${x * f}px ${y * f}px`;
+  });
+});
+
+/* Hero inventory rotator */
+(function () {
+  const el = document.getElementById("invRotator");
+  if (!el) return;
+  const phrases = [
+    "the eval no one wrote.",
+    "what fails silently.",
+    "the audit trail nobody asked for.",
+    "the GST mismatch found at 11pm.",
+    "the vendor doc your team can't verify.",
+    "the invoice that broke the workflow.",
+    "the agent that needed a guardrail.",
+    "what your CFO sees on Monday."
+  ];
+  let i = 0;
+  el.textContent = "";
+  const first = document.createElement("span");
+  first.className = "word in";
+  first.innerHTML = phrases[0];
+  el.appendChild(first);
+
+  let busy = false;
+  setInterval(() => {
+    if (busy) return;
+    busy = true;
+    const cur = el.querySelector(".word.in");
+    if (!cur) { busy = false; return; }
+    i = (i + 1) % phrases.length;
+    const next = document.createElement("span");
+    next.className = "word in-prep";
+    next.innerHTML = phrases[i];
+    el.appendChild(next);
+    const w = Math.max(cur.offsetWidth, next.offsetWidth);
+    el.style.minWidth = w + "px";
+    setTimeout(() => {
+      cur.classList.remove("in"); cur.classList.add("out");
+      next.classList.remove("in-prep"); next.classList.add("in");
+    }, 20);
+    setTimeout(() => {
+      if (cur.parentNode) cur.remove();
+      busy = false;
+    }, 700);
+  }, 2600);
+})();
